@@ -27,7 +27,7 @@ class GitWrapper():
 
         commands.append('git remote set-url ' + repo_config['remote'] + " " + repo_config['url'])
         commands.append('git fetch ' + repo_config['remote'])
-        commands.append('git checkout -f -B ' + repo_config['branch'] + ' -t ' + repo_config['remote'] + '/' + repo_config['branch'])
+        commands.append('git checkout -f -b ' + repo_config['branch'] + ' -t ' + repo_config['remote'] + '/' + repo_config['branch'])
         commands.append('git submodule update --init --recursive')
 
         # All commands need to success
